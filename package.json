@@ -7,7 +7,7 @@
     "test": "mocha './test/**/*.js' --timeout 10000",
     "migrate": "node-pg-migrate",
     "start": "node server.js",
-    "heroku-postbuild": "cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
   "keywords": [
     "node",
