@@ -6,6 +6,8 @@ const bodyParser = require("body-parser");
 global.__basedir = __dirname;
 
 app.set("port", 3002);
+// Serve static files from the React app
+app.use(express.static(path.join(__dirname, "client/build")));
 
 //Header and core
 app.use(function (req, res, next) {
