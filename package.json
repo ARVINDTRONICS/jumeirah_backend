@@ -6,7 +6,8 @@
   "scripts": {
     "test": "mocha './test/**/*.js' --timeout 10000",
     "migrate": "node-pg-migrate",
-    "start": "node server.js"
+    "start": "node server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "keywords": [
     "node",
